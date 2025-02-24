@@ -1,0 +1,23 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --stroke-color: #fff;
+  --main-font: 'Inter-Variable', sans-serif;
+  --accent-font: 'PressStart2P-Regular', sans-serif;
+  --accent-color: #000;
+  --sparks-color: red;
+  --wght: 400;
+  --wdth: 100;
+  --header-max-width: 700px;
+  --header-min-width: 337px; 
+  --gradient1: #d3d3d3;
+  --gradient2: #e7e7e7;
+  --gradient3: #1a1a1a;
+  --background: 
+  repeating-linear-gradient(to right, transparent, transparent 2px, var(--gradient1) 2px, var(--gradient1) 4px),
+  repeating-linear-gradient(to bottom, transparent, transparent 2px, var(--gradient1) 2px, var(--gradient1) 4px),
+  linear-gradient(to bottom, var(--gradient2) 0.01%, var(--gradient3) 100%);
+  --contour-color: #000;
+  --sparks-color: red;
+  --heart-color: red;
+
+}
