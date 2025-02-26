@@ -18,9 +18,9 @@
   fill: var(--heart-color);
 }
 
- .core {
+.card__icon-button .core {
   fill: transparent;
-  transition: fill 0.3 linear 0.003s;
+  transition: fill 0.3 linear 0.03s;
 }
 
 .card__icon-button:hover .core {
@@ -30,20 +30,25 @@
 
 .card__icon-button:active .core {
   fill: var(--heart-color);
-  transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s linear;
 }
 
 .card__icon-button:not(:hover) .core {
   transition-delay: 0.03ms;
 }
 
-.main-body {
+.card__icon-button .main-body {
   fill: transparent;
-  transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s linear;
 }
 
 .card__icon-button:hover .main-body {
   fill: var(--contour-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--heart-color);
   transition: fill 0.3s linear 0.05s;
 }
 
@@ -52,12 +57,6 @@
   transition-duration: 0.3s;
   transition-delay: none;
 }
-
-.card__icon-button:active .main-body {
-  fill: var(--heart-color);
-  transition: fill 0.3s linear 0.05s;
-}
-
 
 .card__icon-button .is-liked .core {
   fill: var(--heart-color);
