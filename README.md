@@ -1,1 +1,1 @@
-https://sexom.github.io/zakrivayuschiy-teg-f-2/
+https://github.com/sexom/zakrivayuschiy-teg-f
