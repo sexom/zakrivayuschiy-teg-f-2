@@ -56,10 +56,7 @@
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
-
-
 /* cards */
-
 
 .cards {
   display: flex;
@@ -69,11 +66,17 @@
 }
 
 .card__image {
-  width: 696px;
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 2px solid #000;
+  border-left: none;
+  border-right: none;
 }
 
 .card__image-container {
+  max-width: 696px;
+  aspect-ratio: 1 / 1;
   position: relative;
   display: inline-block;
 }
@@ -126,24 +129,61 @@
 
 .card__text-list {
   /* padding: 28px 27px 24px 27px; */
-  padding: 25px 30px 20px 26px;
+  padding: 25px 35px 20px 26px;
   display: flex;
   flex-direction: column;
   gap: 28px;
   border: none;
 }
 
-.card__text-list li {
-  border: none; 
+ul .early-stages-text {
+  padding: 25px 24px 20px 26px;
 }
 
+ul .in-this-course-text {
+  padding: 25px 24px 20px 26px;
+}
+
+ul .during-my-studies-text {
+  padding: 25px 24px 20px 26px;
+}
+
+.card__text-list li {
+  border: none; 
+} 
 
 .cards__action {
   padding-inline-end: 27px;
-  padding-block-end: 24px;
+  padding-block-end: 25px;
   display: flex;
   justify-content: end;
+  gap: 3px;
+}
+
+.card__like-button {
+  min-width: 130px;
+  display: flex;
+  justify-content: center;
+  min-height: 41px;}
+
+.card__icon-button {
+  display: flex;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  justify-content: center;
   align-items: center;
+  padding: 0;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
+}
+
+.card__icon-button:focus {
+  outline: none;
 }
 
 .button {
@@ -176,35 +216,6 @@
   background-color: #000;
   transform-origin: left;
   transform: scaleX(0);
-}
-
-.card__icon-button {
-  border: 2px solid transparent;
-  background: none;
-  cursor: pointer;
-  outline: none;
-  transition: border-color 0.3s ease;
-  justify-content: center;
-}
-
-.like-icon {
-  height: 29px;
-  width: 33px;
-}
-
-.card__icon-button:focus-visible {
-  border-color: var(--accent-color);
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__like-button {
-  padding: 9px 37px;
-  max-width: 130px;
-  display: flex;
-  justify-content: center;
 }
 
 .card-padding {
@@ -247,28 +258,6 @@
   margin: 0px 25px 50px 30px;
   padding: 16px 20px;
   gap: 10px;
-}
-
-.card__save-button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.card__save-button:hover::before {
-  transform: scaleX(1);
-}
-
-.card__save-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
-  background-color: #000;
-  transform-origin: left;
-  transform: scaleX(0);
 }
 
 /* dialog */
@@ -315,8 +304,8 @@
   padding: 9px;
 }
 
-.diskette__dialog[open]::backdrop {
-  opacity: 75%;
+.dialog::backdrop {
+  background-color: rgba(0 0 0 / 0.75);
 }
 
 .blur {
@@ -358,9 +347,8 @@
 
   .card__text-list {
     word-break: keep-all; 
-    padding: 25px 33px 25px 25px;
-        /* padding: 28px 27px 24px 27px; */
-    /* padding: 25px 25px 10px 25px; */
+    padding: 19px 33px 25px 27px;
+    line-height: 21px;
     overflow-wrap: normal;
     display: flex;
     flex-direction: column;
@@ -368,8 +356,12 @@
     border: none;
   }
 
-  .the-result-text {
-    padding: 25px 0px 25px 25px;
+  ul .in-this-course-text {
+    padding: 22px 33px 25px 27px;
+  }
+
+  ul .the-result-text {
+    padding: 25px 30px 25px 25px;
   }
 
 

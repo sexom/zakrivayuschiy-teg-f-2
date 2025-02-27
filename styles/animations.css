@@ -34,7 +34,7 @@
 }
 
 .card__icon-button:not(:hover) .core {
-  transition-delay: 0.03ms;
+  transition-delay: .03s;
 }
 
 .card__icon-button .main-body {
